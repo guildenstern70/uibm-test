@@ -1,0 +1,55 @@
+name: Issue
+description: Problema in uno specifico UC
+body:
+  - type: textarea
+    attributes:
+      label: Descrizione
+      description: Descrivi il problema con un breve riepilogo
+      value: |
+        <!-- Inserisci qui un breve riepilogo del problema -->
+      
+        Passaggi per attivare il problema:
+          1.
+          2.
+          3.
+
+          
+        Comportamento Attuale:
+        
+        Comportamento Atteso:
+        
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Specifiche di ambiente
+      description: 'Nella pagina /about è presente un pulsante per copiare tutte le informazioni necessarie'
+      placeholder: |
+        Output della copia
+    validations:
+      required: true
+  - type: dropdown
+    id: browsers
+    attributes:
+      label: Su quali browser è presente il problema?
+      multiple: true
+      options:
+        - Firefox
+        - Chrome
+        - Safari
+        - Microsoft Edge
+    validations:
+        required: true
+  - type: dropdown
+    id: so
+    attributes:
+      label: Con quale sistema operativo?
+      multiple: true
+      options:
+        - MacOS
+        - Windows
+        - Linux
+    validations:
+      required: true
+
